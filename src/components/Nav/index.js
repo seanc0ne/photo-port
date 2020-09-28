@@ -14,8 +14,8 @@ const categories = [
     },
   ];
 
-  function categorySelected() {
-    console.log("hello")
+  function categorySelected(name) {
+    console.log(`${name} clicked`)
   }
 
 function Nav() {
@@ -42,7 +42,7 @@ function Nav() {
     className="mx-1"
     key={category.name}
   >
-    <span onClick={categorySelected} >
+    <span onClick={() => categorySelected(category.name)} >
       {category.name}
     </span>
   </li>
